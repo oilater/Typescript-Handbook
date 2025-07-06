@@ -3,8 +3,8 @@
   "packageManager": "yarn@4.9.1",
   "scripts": {
     "build": "tsc",
-    "start": "node dist/index.js",
-    "dev": "ts-node src/index.ts"
+    "start": "node dist/the-basic.js",
+    "dev": "ts-node src/the-basic.ts"
   },
   "devDependencies": {
     "@types/node": "^24.0.10",
