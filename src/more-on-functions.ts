@@ -18,9 +18,9 @@ type DescribableFunction = {
     (someArg: number): boolean;
 }
 
-function doSomething(fn: DescribableFunction) {
-    console.log(fn.description + ' returned' + fn(6));
-}
+// function doSomething(fn: DescribableFunction) {
+//     console.log(fn.description + ' returned' + fn(6));
+// }
 
 // Construct 시그니처
 
@@ -35,7 +35,7 @@ function doSomething(fn: DescribableFunction) {
 // Date 객체는 두 가지 특성을 다 가지고 있음
 interface CallOrConstruct {
     (n?: number): string;
-    new (s: string): Date;
+    new(s: string): Date;
 }
 
 function fn(ctor: CallOrConstruct) {
@@ -73,7 +73,7 @@ const increment = (n: number) => n + 1;
 const incremented = map(numbers, increment);
 
 // 타입 제한 조건
-function longest<Type extends { length: number}>(a: Type, b: Type) {
+function longest<Type extends { length: number }>(a: Type, b: Type) {
     return a.length >= b.length ? a : b;
 }
 

@@ -27,7 +27,7 @@ function move2(animal: Fish | Bird | Human) {
 }
 
 function logValue(x: Date | string) {
-    
+
     if (x instanceof Date) {
         console.log(x.toUTCString());
     } else {
@@ -68,13 +68,13 @@ function getArea(shape: Shape) {
 
 function getArea2(shape: Shape) {
     switch (shape.kind) {
-      case "circle":
-        return Math.PI * shape.radius ** 2;
-      case "square":
-        return shape.sideLength ** 2;
-      // 모든 경우를 처리하지 않았을 때 발생하는 에러를 방지하기 위해 사용
-      default:
-        const _exhaustiveCheck: never = shape;
-        return _exhaustiveCheck;
+        case "circle":
+            return Math.PI * shape.radius ** 2;
+        case "square":
+            return shape.sideLength ** 2;
+        // 모든 경우를 처리하지 않았을 때 발생하는 에러를 방지하기 위해 사용
+        default:
+            const _exhaustiveCheck: never = shape;
+            return _exhaustiveCheck;
     }
-  }
+}
